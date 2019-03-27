@@ -9,8 +9,11 @@ Built using Keystone.js (a Node.js based CMS) and Vue.js.
 _North Pole Studio_
 
 About
+
 Blog
+
 Portfolio
+
 - Current
     - Chat box
       - Displays: HTML5, Node.js, PostgreSQL, Sass, Vue.js
