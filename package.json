@@ -1,33 +1,30 @@
 {
-  "name": "northpole-studio",
+  "name": "northpolestudiotest",
   "private": true,
   "version": "0.1.0",
   "description": "A Strapi application.",
-  "dependencies": {
-    "anchor": "~0.10.5",
-    "async": "~1.5.0",
-    "bcryptjs": "~2.3.0",
-    "co-busboy": "~1.3.1",
-    "jsonwebtoken": "~5.4.1",
-    "lodash": "~3.10.1",
-    "nodemailer": "~1.10.0",
-    "purest": "~2.0.0",
-    "sails-disk": "~0.10.8",
-    "socket.io": "~1.3.7",
-    "waterline": "~0.10.28",
-    "strapi": "~1.6.4"
-  },
-  "devDependencies": {
-    "strapi-generate": "~1.6.3",
-    "strapi-generate-api": "~1.6.3",
-    "strapi-generate-email": "~1.6.3",
-    "strapi-generate-new": "~1.6.3",
-    "strapi-generate-upload": "~1.6.3",
-    "strapi-generate-users": "~1.6.3"
-  },
   "main": "./server.js",
   "scripts": {
-    "start": "node server.js"
+    "setup": "cd admin && npm run setup",
+    "start": "node server.js",
+    "strapi": "node_modules/strapi/bin/strapi.js",
+    "lint": "node_modules/.bin/eslint api/**/*.js config/**/*.js plugins/**/*.js",
+    "postinstall": "node node_modules/strapi/lib/utils/post-install.js"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.1.1",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-react": "^7.7.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.5",
+    "strapi": "3.0.0-alpha.25.2",
+    "strapi-hook-bookshelf": "3.0.0-alpha.25.2",
+    "strapi-hook-knex": "3.0.0-alpha.25.2",
+    "knex": "latest",
+    "pg": "7.9.0"
   },
   "author": {
     "name": "siddhartha",
@@ -41,9 +38,13 @@
       "url": ""
     }
   ],
+  "strapi": {
+    "packageManager": "npm",
+    "uuid": "4d4f4a2a-52dc-46e7-bcb2-24cee3a0bdd7"
+  },
   "engines": {
-    "node": ">= 0.12.0",
-    "npm": ">= 2.0.0"
+    "node": ">= 10.0.0",
+    "npm": ">= 6.0.0"
   },
   "license": "MIT"
 }

@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 'use strict';
 
 /**
@@ -9,7 +10,7 @@
 
 process.chdir(__dirname);
 
-(function () {
+(() => {
   const strapi = require('strapi');
   strapi.start();
 })();
