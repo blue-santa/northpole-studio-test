@@ -7,12 +7,12 @@
         "client": "postgres",
         "host": "127.0.0.1",
         "port": 5432,
-        "database": "northpolestudiotest",
+        "database": "${process.env.DATABASE_NAME}",
         "username": "postgres",
         "password": "***REMOVED***"
       },
       "options": {
-        "debug": true
+        "debug": false 
       }
     }
   }
