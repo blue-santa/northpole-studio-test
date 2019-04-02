@@ -8,6 +8,8 @@
  * run jobs, or perform some special logic.
  */
 
+require("dotenv").config()
+
 module.exports = cb => {
-  cb();
+  cb()
 };
